@@ -1,0 +1,26 @@
+.dropdown-menu {
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+  flex-grow: 1;
+}
+.title {
+  font-family: "Stack Sans Notch", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.75rem;
+}
+.logo {
+  width: 40px;
+  height: auto;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(255, 255, 255);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
