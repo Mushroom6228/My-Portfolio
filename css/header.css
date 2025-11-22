@@ -1,6 +1,6 @@
 .dropdown-menu {
   font-family: "Roboto", sans-serif;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   display: flex;
   gap: 30px;
@@ -15,12 +15,18 @@
   width: 40px;
   height: auto;
 }
-.header-container {
+.logo-container {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
   background-color: rgb(255, 255, 255);
   position: sticky;
   top: 0;
   z-index: 100;
+  color: black;
 }
