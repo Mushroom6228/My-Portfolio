@@ -1,13 +1,20 @@
 .dropdown-menu {
   font-family: "Roboto", sans-serif;
-  justify-content: flex-end;
+  justify-content:center;
   align-items: center;
   display: flex;
   gap: 30px;
   flex-grow: 1;
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
+a {
+  text-decoration: none;
+}
+
 .title {
-  font-family: "Stack Sans Notch", sans-serif;
+  font-family: "Permanent Marker", cursive;
   font-optical-sizing: auto;
   font-size: 1.75rem;
 }
@@ -24,9 +31,27 @@
   display: flex;
   align-items: center;
   padding: 10px 30px;
-  background-color: rgb(255, 255, 255);
+  width: 100%;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 12px 40px;
+  /* gradient background */
+  background: linear-gradient(90deg, #252525 0%, #1f1f1f 40%, #252525 100%);
+  color: #dfd8d8;
   position: sticky;
   top: 0;
   z-index: 100;
-  color: black;
+}
+
+/* Header link colors to be readable on the gradient */
+.header-container .dropdown-menu a,
+.header-container .dropdown-menu a:link,
+.header-container .dropdown-menu a:visited {
+  color: #fdfdfd;
+}
+
+.header-container .dropdown-menu a:hover {
+  color: rgb(212, 69, 69);
+  transition-duration: 0.3s;
 }

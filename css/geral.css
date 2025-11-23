@@ -1,125 +1,255 @@
 /* ===== RESET ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:"Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    background: #1E1E1E;
-    color: white;
-    line-height: 1.6;
+  background: #1e1e1e;
+  color: white;
+  line-height: 1.6;
 }
 
 /* ===== HERO ===== */
 .hero {
-    display: flex;
-    gap: 20px;
-    padding: 40px;
-    align-items: center;
+  display: flex;
+  gap: 20px;
+  padding: 50px;
+  align-items: center;
+  text-align: center;
+  max-width: 90%;
+  padding-left: 100px;
 }
 
 .profile img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 5px solid #c0c0c0;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 6px solid #c0c0c0;
+  transform: none;
+  position: relative;
+  object-fit: cover;
+}
+
+/* Reduce profile image on small screens so layout stays usable */
+@media (max-width: 900px) {
+  .profile img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile img {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 .hero-text h1 {
-    font-size: 32px;
-    font-weight: bold;
+  font-size: 5.75rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .sub-jp {
-    font-size: 14px;
-    opacity: 0.6;
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  opacity: 0.6;
+  margin-bottom: 10px;
+  margin-top: -40px;
 }
 
 .bio {
-    max-width: 400px;
-    opacity: 0.8;
-    font-size: 14px;
+  font-size: 1.4rem;
+  opacity: 0.8;
+  padding-left: 50px;
+  max-width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+/* Borda quadrada por cima do texto .bio */
+.bio::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 35px;
+  right: -8px;
+  bottom: -8px;
+  border: 2px solid rgba(196, 196, 196, 0.95);
+  pointer-events: none; /* não bloqueia cliques */
+  z-index: 2; /* aparece por cima do texto */
+  border-radius: 0; /* canto quadrado */
+}
+
+@media (max-width: 768px) {
+  .bio::after {
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-width: 2px;
+  }
 }
 
 /* ===== SOBRE ===== */
 .sobre {
-    padding: 40px;
+  padding: 80px;
+  font-size: 1.5rem;
+  max-width: 97%;
+  padding-left: 100px;
 }
 
 .sobre h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
+  padding-top: 50px;
+  font-size: 4rem;
 }
 
 .sobre p {
-    margin-bottom: 15px;
-    max-width: 900px;
-    opacity: 0.9;
+  margin-bottom: 90px;
+  opacity: 0.9;
+  text-align: center;
 }
 
 /* ===== HABILIDADES ===== */
 .habilidades {
-    background: white;
-    color: black;
-    padding: 40px;
+  background: white;
+  color: black;
+  padding: 40px;
 }
 
-.habilidades h2 {
-    font-size: 32px;
-    margin-bottom: 25px;
+.habilidades h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: start;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .skills-container {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px;
 }
 
 .skill-icons img {
-    width: 40px;
-    margin-right: 5px;
+  width: 200%;
+  margin-right: 5px;
+  margin-top: -210px;
 }
 
 .skill-list li {
-    margin-bottom: 8px;
-}
-
-/* FOTO LATERAL */
-.photo-box img {
-    width: 100%;
-    margin-top: 20px;
-    border-radius: 8px;
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  gap: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /* ===== PROJETOS ===== */
 .projetos {
-    padding: 40px;
+  padding: 40px;
 }
 
 .projetos h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .proj-grid {
-    display: flex;
-    gap: 50px;
+  display: flex;
+  gap: 50px;
 }
 
 .proj-item {
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-    opacity: 0.8;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 .proj-item:hover {
-    opacity: 1;
+  opacity: 1;
+}
+
+h1 {
+  margin: 0px 0 0 0;
+  font-size: 1.25em;
+  font-weight: normal;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas */
+  grid-template-rows: auto auto; /* uma linha para cima e outra para baixo */
+  grid-gap: 20px;
+}
+
+.skill-list-primeiro {
+  grid-column: 1 / 3; /* ocupa as 2 colunas */
+}
+
+.skill-list-segundo {
+  grid-column: 1 / 2; /* fica à esquerda */
+}
+
+.skill-list-terceiro {
+  grid-column: 2 / 3; /* fica à direita */
+}
+.habilidades {
+  position: relative;
+}
+
+.habilidades aside {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  max-width: 525px;
+  pointer-events: none;
+}
+
+/* Keep the photo at its original proportions (no zoom). */
+.habilidades .photo-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform: none;
+  overflow: hidden;
+  border-bottom-left-radius: 30px;
+}
+
+@media (max-width: 768px) {
+  .habilidades .photo-box img {
+    transform: none;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+}
+/* Espaço para o conteúdo não ficar embaixo da imagem */
+.habilidades .skills-container {
+  margin-right: calc(50% + 1rem);
+}
+
+/* Responsivo: em telas pequenas a foto fica abaixo e volta ao fluxo */
+@media (max-width: 768px) {
+  .habilidades aside {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin-top: 1rem;
+    pointer-events: auto;
+  }
+  .habilidades .skills-container {
+    margin-right: 0;
+  }
 }
