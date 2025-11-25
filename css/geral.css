@@ -253,3 +253,288 @@ h1 {
     margin-right: 0;
   }
 }
+/* ===== PROJETOS (Mantenha o mesmo) ===== */
+.projetos {
+    padding: 40px;
+}
+
+.projetos h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.proj-grid {
+    display: flex;
+    gap: 50px;
+}
+
+.proj-item {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.proj-item:hover {
+    opacity: 1;
+}
+
+h1 {
+    margin: 0px 0 0 0;
+    font-size: 1.25em;
+    font-weight: normal;
+}
+
+
+/* =========================================
+   SEÇÃO CERTIFICADOS
+   ========================================= */
+.certificados-section {
+    padding: 120px 10%;
+    background-color: #fff;
+    color: #000;
+}
+
+.cert-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 6rem;
+    font-weight: 900;
+    margin-bottom: 120px;
+    text-align: left;
+}
+
+.cert-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: center;
+}
+
+.cert-card {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Animação ao passar o mouse (Hover) */
+.cert-link {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cert-link:hover {
+    transform: translateY(-10px) scale(1.05);
+    cursor: pointer;
+}
+
+.cert-link:hover .icon-box {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cert-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.icon-box {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+/* Cores dos certificados */
+.icon-blue { background-color: #003b6d; }
+.icon-purple { background-color: #000000; }
+.icon-red { background-color: #ffffff; }
+
+
+.cert-card h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.cert-card span {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 5px;
+    color: #333;
+}
+
+/* Responsividade Certificados */
+@media (max-width: 1000px) {
+    .certificados-section { padding: 60px 6%; }
+    .cert-title { font-size: 3.2rem; margin-bottom: 40px; }
+    .cert-container { gap: 28px; }
+    .cert-card { min-width: 260px; }
+    .cert-card img { width: 140px; height: 140px; margin-bottom: 18px; border-radius: 18px; }
+    .icon-box { width: 140px; height: 140px; border-radius: 22px; margin-bottom: 18px; }
+    .cert-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+    .cert-card span { font-size: 1rem; margin-top: 6px; }
+}
+
+@media (max-width: 480px) {
+    .certificados-section { padding: 40px 4%; }
+    .cert-title { font-size: 2rem; margin-bottom: 20px; }
+    .cert-container { gap: 18px; }
+    .cert-card { min-width: 100%; }
+    .cert-card img { width: 100px; height: 100px; margin-bottom: 12px; border-radius: 12px; }
+    .icon-box { width: 100px; height: 100px; border-radius: 12px; margin-bottom: 12px; }
+    .cert-card h3 { font-size: 1rem; margin-bottom: 6px; }
+    .cert-card span { font-size: 0.9rem; }
+}
+
+/* =========================================
+   RODAPÉ (FOOTER) - VERSÃO FINAL GIGANTE E UNIFICADA
+   ========================================= */
+.footer-container {
+    background-color: #161616;
+    color: #fff;
+    /* Padding dobrado */
+    padding: 160px 40px 60px; 
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-title {
+    font-family: "Roboto", sans-serif;
+    /* Fonte dobrada: de 3.5rem para 7rem */
+    font-size: 7rem; 
+    font-weight: 900;
+    margin: 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.contact-wrapper {
+    /* Margem dobrada */
+    margin-top: 20px;
+    margin-bottom: 40px; 
+    display: flex;
+    justify-content: center;
+}
+
+.contact-box {
+    border: 2px solid #555; /* Borda mais espessa */
+    /* Padding dobrado */
+    padding: 10px 30px;
+    color: #bbb;
+    text-decoration: none;
+    /* Fonte dobrada: de 1rem para 2rem */
+    font-size: 2rem; 
+    transition: 0.3s ease;
+    background: transparent;
+}
+
+.contact-box:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+/* Container da seta do meio para centralizar */
+.arrow-center-container {
+    display: flex;
+    justify-content: center;
+    /* Margem dobrada */
+    margin-bottom: 40px; 
+}
+
+.arrow-middle {
+    /* Altura dobrada: de 60px para 120px */
+    height: 120px; 
+    width: auto;
+    opacity: 0.6;
+}
+
+/* Container que segura: Seta Esq + Ícones + Seta Dir */
+.footer-bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Gap dobrado: de 30px para 60px */
+    gap: 60px; 
+    position: relative;
+    /* Margem dobrada */
+    margin-bottom: 80px;
+}
+
+/* ÍCONES SOCIAIS */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    /* Espaço entre ícones dobrado */
+    gap: 60px; 
+    align-items: center;
+    margin-bottom: 0; /* Removido margin-bottom antigo */
+}
+
+.social-icons a {
+    color: #aaa;
+    /* Tamanho da fonte dobrado: de 2.5rem para 5rem */
+    font-size: 5rem; 
+    transition: transform 0.3s, color 0.3s;
+    text-decoration: none;
+    display: flex; 
+    align-items: center;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Ajuste dos SVGs (Indeed e Gupy) */
+.social-icons svg {
+    /* Tamanho dobrado: de 35px para 70px */
+    width: 70px;   
+    height: 70px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+/* SETAS LATERAIS */
+.arrow-side {
+    /* Altura dobrada: de 50px para 100px */
+    height: 100px; 
+    width: auto;
+    opacity: 0.5;
+}
+
+.side-left {
+    transform: rotate(90deg);
+}
+
+.side-right {
+    transform: rotate(-90deg);
+}
+
+.copyright {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: right;
+}
+
+/* Responsividade ajustada */
+@media (max-width: 900px) {
+    .footer-title { font-size: 4rem; }
+    .social-icons a { font-size: 3rem; }
+    .social-icons svg { width: 45px; height: 45px; }
+    .footer-bottom-row { gap: 30px; flex-wrap: wrap; }
+    .arrow-side { display: none; } /* Esconde setas laterais no mobile */
+}
