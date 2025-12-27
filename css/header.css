@@ -1,6 +1,6 @@
 .dropdown-menu {
   font-family: "Roboto", sans-serif;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   display: flex;
   gap: 30px;
@@ -27,6 +27,25 @@ a {
   align-items: center;
   gap: 10px;
 }
+
+.logo-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.01);
+}
+
+.logo-link .title {
+  color: #dfd8d8;
+}
+
+.logo-link:hover .title {
+  color: #1e1e1e(0, 0, 0);
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -49,6 +68,7 @@ a {
 .header-container .dropdown-menu a:link,
 .header-container .dropdown-menu a:visited {
   color: #fdfdfd;
+  transition: color 0.3s ease;
 }
 
 .header-container .dropdown-menu a:hover {
