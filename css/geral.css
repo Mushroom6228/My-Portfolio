@@ -692,40 +692,6 @@ h1 {
   font-weight: normal;
 }
 
-/* =========================================
-   SEÇÃO CERTIFICADOS
-   ========================================= */
-.certificados-section {
-  padding: 120px 10%;
-  background-color: #fff;
-  color: #000;
-}
-
-.cert-title {
-  font-family: "Roboto", sans-serif;
-  font-size: 6rem;
-  font-weight: 900;
-  margin-bottom: 120px;
-  text-align: left;
-}
-
-.cert-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
-  text-align: center;
-}
-
-.cert-card {
-  flex: 1;
-  min-width: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* Animação ao passar o mouse (Hover) */
 .cert-link {
   display: block;
@@ -1058,4 +1024,422 @@ h1 {
     opacity: 0;
     transform: translateX(-50%) translateY(150px);
   }
+}
+/* =========================================
+   NOVA SEÇÃO CERTIFICADOS (ESTILO MONUMENTAL)
+   ========================================= */
+
+.certificados-monumental {
+  /* Mantendo o padrão de espaçamento gigante do seu site */
+  padding: 150px 10%;
+  background-color: #f5f5f5; /* Fundo claro */
+  color: #000000;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cert-header-box {
+  margin-bottom: 100px;
+}
+
+/* Título Gigante seguindo o padrão .case-huge-title */
+.cert-titulo-monstro {
+  font-size: 7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 20px;
+  letter-spacing: -3px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* O Grid dos Cards */
+.cert-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Colunas iguais */
+  gap: 60px; /* Espaço generoso entre os cards */
+  align-items: start;
+}
+
+/* O Card em si */
+.cert-card-pro {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Área do Logo e Nome */
+.cert-logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #ddd; /* Linha divisória sutil */
+}
+
+.logo-circle {
+  width: 140px;
+  height: 140px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+  transition: transform 0.3s ease;
+}
+
+.cert-card-pro:hover .logo-circle {
+  transform: scale(1.1); /* Logo cresce levemente ao passar o mouse no card */
+}
+
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Garante que o logo caiba perfeitamente */
+}
+
+.cert-company-name {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Grupo de Links (Disciplinas) */
+.cert-links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* O Botão/Link Individual */
+.link-certificado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px 25px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Efeito Hover nos Links */
+.link-certificado:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  transform: translateX(10px); /* Move levemente para a direita */
+  box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.link-certificado i {
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.link-certificado:hover i {
+  opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 1100px) {
+  .cert-titulo-monstro {
+    font-size: 4.5rem;
+  }
+
+  .cert-grid-layout {
+    grid-template-columns: 1fr; /* Vira uma coluna só no mobile */
+    gap: 80px;
+  }
+
+  .cert-card-pro {
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+
+  .cert-logo-area {
+    border-bottom: none; /* Remove a linha em mobile para visual card */
+  }
+}
+
+/* =========================================
+   1. RESET & FUNDAMENTALS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base para o uso de REM */
+}
+
+body {
+    background: #1e1e1e;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita scroll horizontal indesejado */
+}
+
+/* =========================================
+   2. HEADER & NAVEGAÇÃO
+   ========================================= */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    width: 100%;
+    background: linear-gradient(90deg, #252525 0%, #1f1f1f 40%, #252525 100%);
+    color: #dfd8d8;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title {
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.5rem;
+}
+
+.dropdown-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    font-weight: 600;
+}
+
+.dropdown-menu a {
+    color: #fdfdfd;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    color: rgb(212, 69, 69);
+}
+
+/* =========================================
+   3. HERO SECTION (Responsivo)
+   ========================================= */
+.hero {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+    justify-content: center;
+    align-items: center;
+    padding: 100px 5%;
+    gap: 40px;
+    min-height: 80vh;
+}
+
+.profile img {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 6px solid #c0c0c0;
+    object-fit: cover;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-text h1 {
+    font-size: clamp(3rem, 8vw, 5.75rem); /* Tamanho fluido */
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.bio {
+    font-size: 1.25rem;
+    opacity: 0.8;
+    position: relative;
+    padding: 20px;
+    border: 2px solid rgba(196, 196, 196, 0.4);
+}
+
+/* =========================================
+   4. SEÇÃO HABILIDADES (Grid Inteligente)
+   ========================================= */
+.habilidades {
+    background: white;
+    color: black;
+    padding: 80px 10%;
+    position: relative;
+}
+
+.habilidades h1 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    margin-bottom: 40px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Foto lateral que some ou se ajusta */
+.habilidades aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    max-width: 400px;
+}
+
+/* =========================================
+   5. PROJETOS (Estilo Case Study)
+   ========================================= */
+.case-section {
+    padding: 100px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.case-huge-title {
+    grid-column: 1 / -1;
+    font-size: clamp(3rem, 10vw, 7rem);
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.full-width-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* =========================================
+   6. CERTIFICADOS (Monumental)
+   ========================================= */
+.certificados-monumental {
+    padding: 100px 10%;
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.cert-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.logo-circle {
+    width: 120px;
+    height: 120px;
+    background: #000;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================================
+   7. FOOTER GIGANTE
+   ========================================= */
+.footer-container {
+    background-color: #161616;
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: clamp(2.5rem, 8vw, 7rem);
+    font-weight: 900;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: clamp(20px, 5vw, 60px);
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   8. MEDIA QUERIES (A MÁGICA DA RESPONSIVIDADE)
+   ========================================= */
+
+/* Tablets e Telas Médias */
+@media (max-width: 1024px) {
+    .case-section {
+        grid-template-columns: 1fr; /* Empilha colunas */
+        text-align: center;
+    }
+    
+    .habilidades aside {
+        position: static;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        display: none; /* Aqui você poderia implementar um menu hambúrguer */
+    }
+
+    .hero {
+        padding: 60px 5%;
+        flex-direction: column;
+    }
+
+    .hero-text h1 {
+        text-align: center;
+    }
+
+    .case-huge-title {
+        font-size: 3.5rem;
+    }
+
+    .cert-titulo-monstro {
+        font-size: 3rem;
+    }
+
+    .footer-bottom-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .arrow-side, .arrow-middle {
+        display: none; /* Remove setas decorativas no mobile para limpar o visual */
+    }
+}
+
+/* Telas muito grandes (Ultrawide) */
+@media (min-width: 1800px) {
+    .hero, .case-section, .certificados-monumental {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
 }
