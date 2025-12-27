@@ -9,6 +9,27 @@
   font-weight: 600;
   font-size: 1.4rem;
 }
+
+@media (max-width: 1200px) {
+  .dropdown-menu {
+    gap: 20px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dropdown-menu {
+    gap: 8px;
+    font-size: 0.75rem;
+  }
+}
 a {
   text-decoration: none;
 }
@@ -18,9 +39,33 @@ a {
   font-optical-sizing: auto;
   font-size: 1.75rem;
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    display: none;
+  }
+}
 .logo {
   width: 40px;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 30px;
+  }
 }
 .logo-container {
   display: flex;
@@ -61,6 +106,18 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 8px 10px;
+  }
 }
 
 /* Header link colors to be readable on the gradient */
