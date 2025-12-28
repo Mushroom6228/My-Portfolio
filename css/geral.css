@@ -1793,3 +1793,125 @@ body {
     display: none;
   }
 }
+
+/* =======================================================
+   PATCH DE CORREÇÃO FINAL - MOBILE E RESPONSIVIDADE
+   Cole isso na última linha do seu arquivo CSS
+   ======================================================= */
+
+/* 1. CORREÇÃO DO BOTÃO DE IDIOMA (Estava gigante) */
+@media (max-width: 768px) {
+  .language-switch-btn {
+    width: 60px !important;    /* Reduzido de 165px para 60px */
+    height: 60px !important;
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-switch-btn {
+    width: 50px !important;    /* Reduzido de 150px para 50px para celular */
+    height: 50px !important;
+    border-width: 1px !important;
+  }
+}
+
+/* 2. CORREÇÃO DO CABEÇALHO E TÍTULO */
+.header-container {
+  /* Garante que o menu não fique por cima do logo no PC */
+  justify-content: space-between;
+}
+
+.logo-container {
+  /* Aumenta o espaço entre o Metamorfando e o logo/letras japonesas */
+  gap: 20px !important; 
+}
+
+/* Esconder Menu Hamburguer no PC (Telas maiores que 900px) */
+@media (min-width: 901px) {
+  .hamburger-btn {
+    display: none !important;
+  }
+  .hamburger-menu {
+    display: none !important;
+  }
+}
+
+/* Ajustes finos para Celular */
+@media (max-width: 480px) {
+  .logo-container {
+    gap: 15px !important;
+  }
+  
+  .title {
+    font-size: 1.1rem !important; /* Diminui o texto Metamorfando */
+    white-space: nowrap; /* Evita que o texto quebre linha */
+  }
+
+  /* Se as letras japonesas forem uma imagem dentro de .logo */
+  .logo {
+    width: 25px !important; /* Ajusta o tamanho do ícone */
+  }
+}
+
+/* 3. CORREÇÃO DOS PROJETOS (STUDYWAY) - COLUNAS QUEBRADAS */
+/* Aplica para todos os projetos em telas menores que 900px */
+@media (max-width: 900px) {
+  
+  /* Força a seção principal a ser Flexbox Vertical */
+  article.case-section:first-of-type,
+  article.case-section:nth-of-type(2),
+  article.case-section:nth-of-type(3) {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+    padding: 60px 20px !important; /* Mais respiro nas laterais */
+  }
+
+  /* Arruma a ordem: Título -> Imagem -> Texto */
+  .case-huge-title {
+    font-size: 3rem !important; /* Título menor para não estourar a tela */
+    margin-bottom: 20px !important;
+    text-align: center;
+  }
+
+  /* Garante que a imagem StudyWay e outras fiquem com 100% de largura */
+  .case-visual-full, 
+  .studyway-hero-img,
+  .full-width-img {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    order: 2; /* Coloca imagem depois do título */
+  }
+
+  .case-intro-text {
+    width: 100% !important;
+    order: 3; /* Texto depois da imagem */
+  }
+
+  /* 4. CORREÇÃO DA LINHA DE BAIXO (IMAGEM + TEXTO LONGO) */
+  .case-details-row {
+    display: flex !important;
+    flex-direction: column !important; /* Empilha: Imagem em cima, texto embaixo */
+    gap: 30px !important;
+  }
+
+  /* Garante que a imagem lateral ocupe a largura toda no celular */
+  .case-visual-side {
+    width: 100% !important;
+    order: 1; /* Imagem primeiro */
+  }
+  
+  .side-img {
+    width: 100% !important;
+  }
+
+  .case-description-long {
+    width: 100% !important;
+    order: 2; /* Texto depois */
+    font-size: 1.1rem !important; /* Texto legível */
+    text-align: left !important; /* Leitura melhor no celular */
+  }
+}
