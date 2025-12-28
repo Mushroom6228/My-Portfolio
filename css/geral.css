@@ -1802,8 +1802,8 @@ body {
 /* 1. CORREÇÃO DO BOTÃO DE IDIOMA (Estava gigante) */
 @media (max-width: 768px) {
   .language-switch-btn {
-    width: 60px !important;    /* Reduzido de 165px para 60px */
-    height: 60px !important;
+    width: 90px !important;    /* Reduzido de 165px para 60px */
+    height: 90px !important;
     bottom: 20px !important;
     right: 20px !important;
   }
@@ -1811,8 +1811,8 @@ body {
 
 @media (max-width: 480px) {
   .language-switch-btn {
-    width: 50px !important;    /* Reduzido de 150px para 50px para celular */
-    height: 50px !important;
+    width: 70px !important;    /* Reduzido de 150px para 50px para celular */
+    height: 70px !important;
     border-width: 1px !important;
   }
 }
@@ -1821,11 +1821,6 @@ body {
 .header-container {
   /* Garante que o menu não fique por cima do logo no PC */
   justify-content: space-between;
-}
-
-.logo-container {
-  /* Aumenta o espaço entre o Metamorfando e o logo/letras japonesas */
-  gap: 20px !important; 
 }
 
 /* Esconder Menu Hamburguer no PC (Telas maiores que 900px) */
