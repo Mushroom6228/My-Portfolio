@@ -103,17 +103,6 @@ a {
   z-index: 100;
 }
 
-@media (max-width: 768px) {
-  .header-container {
-    padding: 10px 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-container {
-    padding: 8px 10px;
-  }
-}
 
 /* Header link colors to be readable on the gradient */
 .header-container .dropdown-menu a,
@@ -126,4 +115,22 @@ a {
 .header-container .dropdown-menu a:hover {
   color: rgb(212, 69, 69);
   transition-duration: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 10px 15px;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 8px 10px;
+  }
+    .title {
+    font-size: 1rem;
+  }
 }
