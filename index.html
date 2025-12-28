@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metagorfando</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
     <link rel="icon" href="icon.png">
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
@@ -25,7 +26,19 @@
         <li><a href="#certificados">Certificados</a></li>
         <li><a href="#contatos">Contatos</a></li>
       </ul>
+      <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fas fa-bars"></i>
+      </button>
     </header>
+
+    <!-- Menu Mobile -->
+    <div class="hamburger-menu" id="hamburgerMenu">
+      <button class="close-btn" id="closeBtn">&times;</button>
+      <a href="#habilidades" class="menu-link">Habilidades</a>
+      <a href="#projetos" class="menu-link">Projetos</a>
+      <a href="#certificados" class="menu-link">Certificados</a>
+      <a href="#contatos" class="menu-link">Contatos</a>
+    </div>
 
     <!-- ===== HERO ===== -->
     <section class="hero">
@@ -307,5 +320,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="mobile-menu.js"></script>
 </body>
 </html>

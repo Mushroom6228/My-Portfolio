@@ -46,11 +46,6 @@ a {
   }
 }
 
-@media (max-width: 480px) {
-  .title {
-    display: none;
-  }
-}
 .logo {
   width: 40px;
   height: auto;
