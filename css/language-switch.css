@@ -1,0 +1,98 @@
+/* ===== BOTÃO FLUTUANTE DE IDIOMA ===== */
+.language-switch-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  border: 2px solid #dfd8d8;
+  background-color: #1e1e1e;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 98;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.language-switch-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.language-switch-btn:active {
+  transform: scale(0.95);
+}
+
+.language-switch-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .language-switch-btn {
+    width: 165px;
+    height: 165px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-switch-btn {
+    width: 150px;
+    height: 150px;
+    bottom: 15px;
+    right: 15px;
+    border-width: 1.5px;
+  }
+}
+
+/* ===== CONTROLE DE IDIOMAS ===== */
+/* Por padrão, mostra português (data-pt) */
+[data-en] {
+  display: none;
+}
+
+/* Quando a classe lang-en for ativada no body, mostra inglês */
+body.lang-en [data-pt] {
+  display: none;
+}
+
+body.lang-en [data-en] {
+  display: inline;
+}
+
+/* Para elementos em bloco */
+body.lang-en [data-pt-block] {
+  display: none;
+}
+
+body.lang-en [data-en-block] {
+  display: block;
+}
+
+/* Para itens de lista */
+body.lang-en [data-pt-li] {
+  display: none;
+}
+
+body.lang-en [data-en-li] {
+  display: list-item;
+}
+
+/* Para seções inteiras */
+body.lang-en [data-pt-section] {
+  display: none;
+}
+
+body.lang-en [data-en-section] {
+  display: block;
+}

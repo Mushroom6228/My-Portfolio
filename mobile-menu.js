@@ -35,9 +35,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Fechar menu ao clicar fora dele
-  hamburgerMenu.addEventListener("click", function (e) {
-    if (e.target === hamburgerMenu) {
-      closeMenu();
-    }
-  });
+
 });

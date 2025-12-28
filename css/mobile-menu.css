@@ -159,3 +159,56 @@
     margin-top: -100px !important;
   }
 }
+
+/* 1. Aumentar o título "Metamorfando" no celular */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem !important; /* Aumentado de 1.2rem para 2rem */
+  }
+}
+
+/* 2. Correção do botão "X" (Hambúrguer) */
+.hamburger-btn.active i {
+  background-color: transparent !important; /* Esconde a linha do meio */
+}
+
+.hamburger-btn.active i::before {
+  top: 0;
+  transform: rotate(45deg);
+  background-color: #1e1e1e; /* Garante que fique escuro no fundo branco */
+}
+
+.hamburger-btn.active i::after {
+  top: 0;
+  transform: rotate(-45deg);
+  background-color: #1e1e1e; /* Garante que fique escuro no fundo branco */
+}
+
+/* 3. Travar o Scroll e garantir preenchimento total */
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Usa view width para garantir preenchimento */
+  height: 100vh; /* Usa view height */
+  background-color: #ffffff;
+  z-index: 999; /* Aumentado para ficar acima de tudo */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  overflow: hidden; /* Impede scroll interno no menu */
+}
+
+/* Classe que será aplicada ao BODY via JS para travar o site atrás */
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Garante que o Header e o Botão fiquem por cima de tudo quando aberto */
+.header-container.menu-open {
+  z-index: 1000;
+  background: #ffffff !important;
+}

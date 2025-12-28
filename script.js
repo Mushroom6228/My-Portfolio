@@ -46,7 +46,6 @@ function showCopyNotification() {
   // Remove o pop-up após 3 segundos
   setTimeout(() => {
     notification.classList.remove("show");
-    notification.classList.add("hide");
     // Aguarda a animação de saída terminar antes de remover
     setTimeout(() => {
       notification.remove();

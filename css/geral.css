@@ -844,11 +844,6 @@ h1 {
   pointer-events: none;
 }
 
-@media (max-width: 1200px) {
-  .habilidades aside {
-    max-width: 400px;
-  }
-}
 
 @media (max-width: 900px) {
   .habilidades aside {
@@ -1784,5 +1779,17 @@ body {
   .case-divider {
     width: calc(100vw - 30px) !important;
     left: -15px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .habilidades aside {
+    max-width: 400px;
+  }
+   .hamburger-btn {
+    display: none;
+ }
+ .hamburger-menu {
+    display: none;
   }
 }
