@@ -22,34 +22,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function showCopyNotification() {
-  // Remove notificação anterior se existir
-  const existingNotification = document.querySelector(
-    ".email-copy-notification"
-  );
+  const existingNotification = document.querySelector(".email-copy-notification");
   if (existingNotification) {
     existingNotification.remove();
   }
 
-  // Cria o elemento do pop-up
   const notification = document.createElement("div");
   notification.className = "email-copy-notification";
   notification.textContent = "E-mail Copiado";
 
-  // Adiciona ao body
   document.body.appendChild(notification);
 
-  // Adiciona a classe .show para iniciar a animação de entrada
+  // Entrada: Adiciona a classe quase instantaneamente
   setTimeout(() => {
     notification.classList.add("show");
-  }, 100); // Pequeno delay para garantir que a transição ocorra
+  }, 10); 
 
-  // Define um tempo para remover a classe .show e esconder o pop-up
+  // Saída:
   setTimeout(() => {
     notification.classList.remove("show");
 
-    // Remove o elemento do DOM após a transição de saída
+    // IMPORTANTE: O tempo aqui (500ms) deve bater com o tempo do transition no CSS
     setTimeout(() => {
       notification.remove();
-    }, 3000); // Deve ser maior que a duração da transição no CSS (0.4s)
-  }, 3000); // Tempo que o pop-up fica visível
+    }, 500); 
+  }, 2500); // O pop-up fica visível por 2.5 segundos
 }

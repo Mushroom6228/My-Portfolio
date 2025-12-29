@@ -75,7 +75,7 @@ body {
 
 .hero-text h1 {
   font-size: 5.75rem;
-  font-weight: bold;
+  font-weight:bolder;
   text-align: center;
 }
 
@@ -85,17 +85,6 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-}
 
 .sub-jp {
   font-size: 1.5rem;
@@ -1211,7 +1200,9 @@ h1 {
   opacity: 0;
   pointer-events: none;
   z-index: 10000;
-  transition: opacity 1s cubic-bezier(0.2, 1, 0.3, 1), transform 1s cubic-bezier(0.2, 1, 0.3, 1);
+  transition: 
+    opacity 0.3s ease-in, 
+    transform 0.3s ease-out;
 }
 
 .email-copy-notification.show {
@@ -1941,16 +1932,17 @@ body {
     padding-top: 20px;
   }
   .hero-text h1 { 
-    font-size: 1.6rem; 
+    font-size: 2rem; 
   }
   .sub-jp { 
     font-size: 1.1rem;
-    padding-top: 30px; 
+    padding-top: 15px; 
   }
   .bio { 
     font-size: 0.8rem; /* Proporcional aos 0.75rem do dropdown-menu */
   }
   .profile img {
-    width: 140px;
+    width: 200px;
+    height: 200px;
   }
 }
