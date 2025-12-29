@@ -114,12 +114,12 @@
   color: rgb(212, 69, 69);
 }
 
-@media (max-width: 480px) {
-  .hamburger-btn {
+@media (max-width: 768px) {
+  .header-container .hamburger-btn {
     display: flex;
   }
 
-  .dropdown-menu {
+  .header-container .dropdown-menu {
     display: none !important;
   }
 }
@@ -157,13 +157,6 @@
   .skill-icons img {
     width: 100%;
     margin-top: -100px !important;
-  }
-}
-
-/* 1. Aumentar o título "Metamorfando" no celular */
-@media (max-width: 480px) {
-  .title {
-    font-size: 2rem !important; /* Aumentado de 1.2rem para 2rem */
   }
 }
 
