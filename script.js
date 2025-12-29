@@ -38,17 +38,18 @@ function showCopyNotification() {
   // Adiciona ao body
   document.body.appendChild(notification);
 
-  // Inicia a animação de entrada
+  // Adiciona a classe .show para iniciar a animação de entrada
   setTimeout(() => {
     notification.classList.add("show");
-  }, 10);
+  }, 100); // Pequeno delay para garantir que a transição ocorra
 
-  // Remove o pop-up após 3 segundos
+  // Define um tempo para remover a classe .show e esconder o pop-up
   setTimeout(() => {
     notification.classList.remove("show");
-    // Aguarda a animação de saída terminar antes de remover
+
+    // Remove o elemento do DOM após a transição de saída
     setTimeout(() => {
       notification.remove();
-    }, 300);
-  }, 3000);
+    }, 3000); // Deve ser maior que a duração da transição no CSS (0.4s)
+  }, 3000); // Tempo que o pop-up fica visível
 }
