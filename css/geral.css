@@ -1886,28 +1886,17 @@ body {
   }
 }
 /* --- Estilos Base (Desktop) --- */
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px;
-  margin: 40px auto;
-  max-width: 900px; /* Define o limite do retângulo */
-  /* Se quiser que apareça o "retângulo", adicione um background ou border aqui */
-}
 
 .hero-text h1 {
-  font-family: "Permanent Marker", cursive; /* Seguindo o padrão do seu título */
-  font-size: 4rem;
-  margin-bottom: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2; /* Seguindo o padrão do seu título */
+  text-align: center;
 }
 
 .sub-jp {
   font-size: 2rem;
-  margin-bottom: 20px;
   color: #dfd8d8;
+  text-align: center;
 }
 
 .bio {
@@ -1915,6 +1904,7 @@ body {
   font-size: 1.2rem;
   line-height: 1.6;
   max-width: 700px;
+  text-align: center;
 }
 
 /* --- Ajustes de Proporção Mobile --- */
@@ -1934,31 +1924,33 @@ body {
     font-size: 2.2rem; /* Diminui para não quebrar linha bruscamente */
   }
   .sub-jp { 
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
+    padding-top: 30px; 
   }
   .bio { 
     font-size: 0.95rem; /* Bate com o tamanho do menu que você definiu */
-    padding: 0 10px;
+    padding: 15px;
   }
   .profile img {
-    width: 120px; /* Ajuste opcional da foto de perfil */
+    width: 220px; /* Ajuste opcional da foto de perfil */
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 15px;
+    padding-top: 20px;
   }
   .hero-text h1 { 
     font-size: 1.6rem; 
   }
   .sub-jp { 
-    font-size: 1.1rem; 
+    font-size: 1.1rem;
+    padding-top: 30px; 
   }
   .bio { 
     font-size: 0.8rem; /* Proporcional aos 0.75rem do dropdown-menu */
   }
   .profile img {
-    width: 90px;
+    width: 140px;
   }
 }
