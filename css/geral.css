@@ -1806,7 +1806,7 @@ body {
   }
   
   .title {
-    font-size: 1.25rem !important; /* Diminui o texto Metamorfando */
+    font-size: 1.4rem !important; /* Diminui o texto Metamorfando */
     white-space: nowrap; /* Evita que o texto quebre linha */
   }
 
