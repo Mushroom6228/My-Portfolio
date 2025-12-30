@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // URLs das bandeiras (usando arquivos locais)
   const flags = {
-    pt: "brasil.webp", // Bandeira Brasil
-    en: "euas.webp", // Bandeira EUA
+    pt: "euas.webp", // Bandeira Brasil
+    en: "brasil.webp", // Bandeira EUA
   };
 
   // Verificar o idioma salvo no localStorage (padrão: português)
