@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       // Copia o email para o clipboard
-      const email = "metagorfando6228@gmail.com";
+      const email = "mushroom.g6228@gmail.com";
       navigator.clipboard
         .writeText(email)
         .then(function () {
